@@ -10,7 +10,18 @@ body {
     border: 1px solid #cccccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    visibility:hidden;
+    transform: translate(-50%,-50%)scale(0.1);
+    top:0;
+    left: 50%;
+    position:absolute;
+    transition:transform 0.4s, top 0.4s;
   }
+.open-popup{
+    visibility:visible;
+    top:50%;
+    transform: translate(-50%,-50%)scale(1);
+}
 
 #chatbot {
     background-color: #f5f5f5;
