@@ -7,6 +7,13 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.115.4">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="./chat bot/bot.css">
+
     <title>Beta Version</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
@@ -107,7 +114,6 @@
   }
 }
 
-
   
     </style>
 
@@ -183,10 +189,33 @@
     <h1>Beta Version</h1>
     <p class="lead">Hey, Wanna know something?...Ask Away</p>
     <p class="lead">
-      <a href="./chat bot/bot.html" class="btn btn-lg btn-light fw-bold border-white bg-white" target="_parent">Let's Chat</a>
+     <button class="btn myButton" onclick="openpopup()"><a class="btn btn-lg btn-light fw-bold border-white bg-white" target="_parent">Let's Chat</a></button> 
+      
     </p>
   </main>
-  
+  <div class="chatbot-container" id="popup">
+    <div id="header">
+        <h1>Chatbot</h1>
+    </div>
+    <div id="chatbot">
+        <div id="conversation">
+          <div class="chatbot-message">
+            <p class="chatbot-text">Hi! 👋 it's great to see you!</p>
+          </div>
+        </div>
+        <form id="input-form">
+          <message-container>
+            <input id="input-field" type="text" placeholder="Type your message here">
+            <button id="submit-button" type="submit">
+              <img class="send-icon" src="send-message.png" alt="">
+            </button>
+          </message-container>
+            
+        </form>
+        <button class="btn" onclick="closepopup()">Close Chat</button>
+    </div>  
+
+</div>
   
   <footer class="mt-auto text-white-50">
    <!-- <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p> -->
@@ -194,6 +223,17 @@
 </div>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script>
 
+  let popup= document.getElementById("popup");
+  function openpopup(){
+    popup.classList.add("open-popup");
+  }
+  function closepopup(){
+    popup.classList.remove("open-popup");
+  }
+
+</script>
+<script src="bot.js"></script>
     </body>
 </html>
